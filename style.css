@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&family=Varela+Round&display=swap');
+
+/* Important: When you set the width and height properties of an element with CSS,
+you just set the width and height of the content area. To calculate the full size of an element,
+you must also add padding,
+borders and margins */
+
+
+/* The total width of an element should be calculated like this:
+
+Total element width=width+left padding+right padding+left border+right border+left margin+right margin 
+
+The total height of an element should be calculated like this: Total element height=height+top padding+bottom padding+top border+bottom border+top margin+bottom margin*/
+
+.body {
+    background-color: aqua;
+}
+
+* {
+    /*   this addresses all the elements. */
+    margin: 0;
+    padding: 0;
+}
+
+.navi {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.navi nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    /*this removes all bullet marks in a list*/
+    height: 89px;
+    background-color: black;
+    color: white;
+}
+
+nav ul li {
+    padding: 12px;
+}
+
+
+/* .navi nav ul is a flex container.
+.navi nav ul li (excluding .brand) are flex items.
+when you introduce a class like .brand on one of the li elements, the styles applied directly to .navi nav ul might not necessarily propagate to the .brand class.
+.brand itself needs to be made a flex container separately if you want its children to be flex items. */
+
+.brand img {
+    width: 89px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
